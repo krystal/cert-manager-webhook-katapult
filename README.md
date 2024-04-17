@@ -2,6 +2,16 @@
 
 This is a Cert Manager Webhook service to faciliate DNS challenges with Katapult's DNS platform.
 
+## Installation
+
+To install, just runs the following to install or upgrade on your cluster.
+
+```
+helm upgrade --install oci://ghcr.io/krystal/charts/cert-manager-webhook-katapult -n cert-manager
+```
+
+You'll need to add a secret containing an API key for your Katapult account. This is referenced by the `Issuer` or `ClusterIssuer` which uses this webhook.
+
 ## Example issuer
 
 ```yaml
