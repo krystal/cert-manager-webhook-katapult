@@ -10,7 +10,8 @@
       "prerelease": false,
       "extra-files": [
         "chart/Chart.yaml"
-      ]
+      ],
+      "initial-version": "0.0.1"
     }
   },
   "changelog-sections": [
