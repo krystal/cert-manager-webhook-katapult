@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.3](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.2...v0.0.3) (2024-04-17)
+
+
+### Miscellaneous Chores
+
+* upgrade go-restful ([133c013](https://github.com/krystal/cert-manager-webhook-katapult/commit/133c013713367bd21a5a772214779c274054ed86))
+
+
+### Build System
+
+* **image:** build amd64 and arm64 ([fed3d39](https://github.com/krystal/cert-manager-webhook-katapult/commit/fed3d39891ff48aa933e3641991bdaa499f12d5d))
+
 ## [0.0.2](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.1...v0.0.2) (2024-04-17)
 
 
