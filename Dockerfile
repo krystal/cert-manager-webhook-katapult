@@ -10,7 +10,7 @@ RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -mod=readonly -a -o cert-manager-webhook-katapult .
+RUN CGO_ENABLED=0 go build -mod=readonly -a -o cert-manager-webhook-katapult .
 
 FROM scratch
 WORKDIR /
