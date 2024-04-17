@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.0.2](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.1...v0.0.2) (2024-04-17)
+
+
+### Miscellaneous Chores
+
+* **release-please:** consider build commits for new releases ([bdf5673](https://github.com/krystal/cert-manager-webhook-katapult/commit/bdf56739b84a343e8de7fe3b1b70c90e2cc0027e))
+
+
+### Build System
+
+* **helm:** use the krystal/charts repository ([90b8e37](https://github.com/krystal/cert-manager-webhook-katapult/commit/90b8e37ece2b1d2b046ed3a6fc93e7a8f2cba630))
+
 ## 0.0.1 (2024-04-17)
 
 
