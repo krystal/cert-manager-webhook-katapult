@@ -1,0 +1,16 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  name: v1alpha1.{{ .Values.webhook.groupName }}
+  labels:
+    {{- include "webhook.labels" . | nindent 4 }}
+  annotations:
+    cert-manager.io/inject-ca-from: "{{ .Release.Namespace }}/{{ include "webhook.servingCertificate" . }}"
+spec:
+  group: {{ .Values.webhook.groupName }}
+  groupPriorityMinimum: 1000
+  versionPriority: 15
+  service:
+    name: {{ include "webhook.fullname" . }}
+    namespace: {{ .Values.certManager.namespace | quote }}
+  version: v1alpha1

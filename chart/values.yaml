@@ -1,0 +1,27 @@
+webhook:
+  groupName: acme.katapult.io
+
+image:
+  repository: ghcr.io/krystal/cert-manager-webhook-katapult
+  tag: null
+  pullPolicy: IfNotPresent
+  imagePullSecrets: null
+
+certManager:
+  namespace: cert-manager
+  serviceAccountName: cert-manager
+
+pki:
+  caDuration: 43800h # 5y
+  servingCertificateDuration: 8760h # 1y
+
+service:
+  type: ClusterIP
+  port: 443
+
+nameOverride: ""
+fullnameOverride: ""
+resources: {}
+nodeSelector: {}
+affinity: {}
+tolerations: {}
