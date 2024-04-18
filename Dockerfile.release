@@ -1,0 +1,31 @@
+FROM alpine:3 as certs
+
+RUN apk add --no-cache git ca-certificates && \
+    update-ca-certificates
+
+FROM alpine:3 as binary
+
+ARG TARGETPLATFORM
+RUN mkdir -p /tmp/dist
+COPY ./dist /tmp/dist
+
+RUN set -e \
+    && echo "TARGETPLATFORM=$TARGETPLATFORM" \
+    && if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
+    mv /tmp/dist/cert-manager-webhook-katapult_linux_amd64_v1/cert-manager-webhook-katapult /cert-manager-webhook-katapult; \
+    elif [ "$TARGETPLATFORM" = "linux/arm64" ]; then \
+    mv /tmp/dist/cert-manager-webhook-katapult_linux_arm64/cert-manager-webhook-katapult /cert-manager-webhook-katapult; \
+    elif [ "$TARGETPLATFORM" = "linux/arm/v6" ]; then \
+    mv /tmp/dist/cert-manager-webhook-katapult_linux_arm_6/cert-manager-webhook-katapult /cert-manager-webhook-katapult; \
+    elif [ "$TARGETPLATFORM" = "linux/arm/v7" ]; then \
+    mv /tmp/dist/cert-manager-webhook-katapult_linux_arm_7/cert-manager-webhook-katapult /cert-manager-webhook-katapult; \
+    else \
+    echo "Unsupported target platform: $TARGETPLATFORM"; \
+    exit 1; \
+    fi
+
+FROM scratch
+WORKDIR /
+COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+COPY --from=binary /cert-manager-webhook-katapult /
+ENTRYPOINT ["/cert-manager-webhook-katapult"]
