@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.4...v0.0.5) (2024-04-18)
+
+
+### Build System
+
+* **ci:** fix typo in workflow ([d324bfa](https://github.com/krystal/cert-manager-webhook-katapult/commit/d324bfa09bbb65fae037b40cf14c44ef714691e6))
+
 ## [0.0.4](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.3...v0.0.4) (2024-04-18)
 
 
