@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.0.4](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.3...v0.0.4) (2024-04-18)
+
+
+### Documentation
+
+* update README ([c2ca633](https://github.com/krystal/cert-manager-webhook-katapult/commit/c2ca633718b21e997d2a8542d664ccb64b83b185))
+
+
+### Miscellaneous Chores
+
+* go mod tidy ([6e7e745](https://github.com/krystal/cert-manager-webhook-katapult/commit/6e7e74597572c1d08ba07a67ca3c93a3e89ebcf0))
+
+
+### Build System
+
+* **docker:** no need to specify GOOS or GOARCH ([8b70046](https://github.com/krystal/cert-manager-webhook-katapult/commit/8b700465bef53b36fe1025f9ae42500bcc6e2af9))
+
 ## [0.0.3](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.2...v0.0.3) (2024-04-17)
 
 
