@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.6](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.5...v0.0.6) (2024-04-18)
+
+
+### Build System
+
+* **ci:** fix Dockerfile path ([3489e3c](https://github.com/krystal/cert-manager-webhook-katapult/commit/3489e3ce7a5897e8c864cafecdd630e7a90041a6))
+
 ## [0.0.5](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.4...v0.0.5) (2024-04-18)
 
 
