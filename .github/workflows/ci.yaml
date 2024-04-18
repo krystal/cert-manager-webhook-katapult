@@ -45,7 +45,7 @@ jobs:
           # Skip announce and publish, release please will already have handled
           # that. We just want to build the binaries for use in the docker build
           # step.
-          args: release release --clean --skip=announce,publish
+          args: release --clean --skip=announce,publish
         env:
           REGISTRY: ghcr.io
           IMAGE_NAME: ${{ github.repository }}
