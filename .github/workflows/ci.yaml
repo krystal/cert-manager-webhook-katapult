@@ -53,6 +53,7 @@ jobs:
       - uses: docker/build-push-action@v5
         with:
           context: .
+          file: "{context}/Dockerfile.release"
           tags: ghcr.io/krystal/cert-manager-webhook-katapult:${{ needs.release-please.outputs.version }}
           platforms: linux/amd64,linux/arm64,linux/arm/v6,linux/arm/v7
           push: true
