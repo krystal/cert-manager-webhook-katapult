@@ -41,7 +41,7 @@ jobs:
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v5
         with:
-          version: latest
+          version: "~> v2"
           # Skip announce and publish, release please will already have handled
           # that. We just want to build the binaries for use in the docker build
           # step.
