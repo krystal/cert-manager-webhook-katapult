@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.8](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.7...v0.0.8) (2025-01-21)
+
+
+### Miscellaneous Chores
+
+* update name of arm64 binary ([9906570](https://github.com/krystal/cert-manager-webhook-katapult/commit/990657007315a83b6cdb94f1edef48812d1d1ac6))
+
 ## [0.0.7](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.6...v0.0.7) (2025-01-21)
 
 
