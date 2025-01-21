@@ -14,7 +14,7 @@ RUN set -e \
     && if [ "$TARGETPLATFORM" = "linux/amd64" ]; then \
     mv /tmp/dist/cert-manager-webhook-katapult_linux_amd64_v1/cert-manager-webhook-katapult /cert-manager-webhook-katapult; \
     elif [ "$TARGETPLATFORM" = "linux/arm64" ]; then \
-    mv /tmp/dist/cert-manager-webhook-katapult_linux_arm64/cert-manager-webhook-katapult /cert-manager-webhook-katapult; \
+    mv /tmp/dist/cert-manager-webhook-katapult_linux_arm64_v8.0/cert-manager-webhook-katapult /cert-manager-webhook-katapult; \
     elif [ "$TARGETPLATFORM" = "linux/arm/v6" ]; then \
     mv /tmp/dist/cert-manager-webhook-katapult_linux_arm_6/cert-manager-webhook-katapult /cert-manager-webhook-katapult; \
     elif [ "$TARGETPLATFORM" = "linux/arm/v7" ]; then \
