@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.7](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.6...v0.0.7) (2025-01-21)
+
+
+### Features
+
+* support for setting the katapult API host ([06ee41d](https://github.com/krystal/cert-manager-webhook-katapult/commit/06ee41d5367bec7ae01a6500b2902c63690e127c))
+
 ## [0.0.6](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.5...v0.0.6) (2024-04-18)
 
 
