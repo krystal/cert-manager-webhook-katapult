@@ -33,6 +33,7 @@ spec:
             groupName: acme.katapult.io
             solverName: katapult
             config:
+              host: https://api.katapult.io
               apiToken:
                 name: katapult-secret
                 key: token

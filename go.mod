@@ -4,7 +4,7 @@ go 1.22.1
 
 require (
 	github.com/cert-manager/cert-manager v1.14.4
-	github.com/krystal/go-katapult-dns-acme-solver v0.0.0-20240416214453-ac4a63c3cf66
+	github.com/krystal/go-katapult-dns-acme-solver v0.0.0-20250121131338-75136ff0819f
 	k8s.io/api v0.29.0
 	k8s.io/apiextensions-apiserver v0.29.0
 	k8s.io/apimachinery v0.29.0

@@ -15,6 +15,7 @@ import (
 // ProviderConfig represents the config used for Katapult DNS
 type ProviderConfig struct {
 	APIToken *v1.SecretKeySelector `json:"apiToken,omitempty"`
+	Host     string                `json:"host,omitempty"`
 }
 
 // Load the configuration
@@ -55,6 +56,6 @@ func (p *ProviderSolver) createKatapultSolver(ch *v1alpha1.ChallengeRequest) (*k
 		return nil, fmt.Errorf("could not find key %s in secret %s", config.APIToken.Key, config.APIToken.Name)
 	}
 
-	solver := katapultsolver.NewSolver(string(token), p.Logger)
+	solver := katapultsolver.NewSolverWithHost(config.Host, string(token), p.Logger)
 	return solver, nil
 }
