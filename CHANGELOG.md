@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.9](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.8...v0.0.9) (2025-01-21)
+
+
+### Features
+
+* upgrade go-katapult-dns-acme-solver to work with dns:acme ([56e897d](https://github.com/krystal/cert-manager-webhook-katapult/commit/56e897d104c0acde08acd21b0892e63c1a1efeff))
+
 ## [0.0.8](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.7...v0.0.8) (2025-01-21)
 
 
