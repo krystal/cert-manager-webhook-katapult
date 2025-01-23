@@ -1,6 +1,7 @@
 webhook:
   groupName: acme.katapult.io
-
+  postSetSleepTime: 5
+  
 image:
   repository: ghcr.io/krystal/cert-manager-webhook-katapult
   tag: null

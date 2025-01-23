@@ -3,7 +3,10 @@ package dns
 import (
 	"fmt"
 	"log"
+	"os"
+	"strconv"
 	"strings"
+	"time"
 
 	"github.com/cert-manager/cert-manager/pkg/acme/webhook/apis/acme/v1alpha1"
 	"k8s.io/client-go/kubernetes"
@@ -43,7 +46,14 @@ func (p *ProviderSolver) Present(ch *v1alpha1.ChallengeRequest) error {
 		return fmt.Errorf("could not create katapult solver: %w", err)
 	}
 
-	return solver.Set(sanitizedZone, sanitizedFQDN, ch.Key)
+	err = solver.Set(sanitizedZone, sanitizedFQDN, ch.Key)
+	if err != nil {
+		return err
+	}
+
+	sleepAfterSet()
+
+	return nil
 }
 
 // CleanUp should delete the relevant TXT record from the DNS provider console.
@@ -85,4 +95,19 @@ func (p *ProviderSolver) Initialize(kubeClientConfig *rest.Config, stopCh <-chan
 	p.client = cl
 
 	return nil
+}
+
+func sleepAfterSet() {
+	sleepTimeStr := os.Getenv("POST_SET_SLEEP_TIME")
+	sleepTime := 5
+
+	if sleepTimeStr != "" {
+		var err error
+		sleepTime, err = strconv.Atoi(sleepTimeStr)
+		if err != nil {
+			sleepTime = 5
+		}
+	}
+
+	time.Sleep(time.Duration(sleepTime) * time.Second)
 }
