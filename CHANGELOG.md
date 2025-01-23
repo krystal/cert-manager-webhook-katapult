@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.10](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.9...v0.0.10) (2025-01-23)
+
+
+### Features
+
+* sleep after setting DNS records to give some time to propogate before immediately making a request ([6c55515](https://github.com/krystal/cert-manager-webhook-katapult/commit/6c55515dc7f44d779e7e96582810f8985c37040f))
+
 ## [0.0.9](https://github.com/krystal/cert-manager-webhook-katapult/compare/v0.0.8...v0.0.9) (2025-01-21)
 
 
